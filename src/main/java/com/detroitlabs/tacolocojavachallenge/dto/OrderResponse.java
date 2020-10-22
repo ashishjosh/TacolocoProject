@@ -2,6 +2,11 @@ package com.detroitlabs.tacolocojavachallenge.dto;
 import java.util.List;
 
 public class OrderResponse {
+    /**
+     * @subTotal is  os
+     * @discount : 20$
+     * This class is domain c;ass tp spre
+     * */
     private List<OrderRequest> orderRequestList;
     private float subTotal;
     private float discount;

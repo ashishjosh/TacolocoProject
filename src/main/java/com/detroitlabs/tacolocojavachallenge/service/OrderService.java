@@ -17,22 +17,23 @@ public class OrderService {
 
     public OrderResponse getTotalAmount(List<OrderRequest> orderRequestList) {
         OrderResponse orderResponse = new OrderResponse();
-        float subtotal = 0.0f;
-        int totalQuantitiy = 0;
+       float subTotal = 0.0f;
+
+        int totalQuantity = 0;
         for (OrderRequest orderRequest : orderRequestList) {
             Menu menu = menuRepo.findByItem(orderRequest.getName());
-            if(menu != null) {
-                subtotal += orderRequest.getQuantity() * menu.getPrice();
-                totalQuantitiy += orderRequest.getQuantity();
+            if(menu != null) { // menu null pointer handle
+                subTotal += orderRequest.getQuantity() * menu.getPrice();
+                totalQuantity += orderRequest.getQuantity();
             }
         }
         orderResponse.setOrderRequestList(orderRequestList);
-        orderResponse.setSubTotal(subtotal);
-        if(totalQuantitiy >= 4) {
-            orderResponse.setDiscount(subtotal*0.2f);
-            orderResponse.setTotalPrice(subtotal * 0.8f);
+        orderResponse.setSubTotal(subTotal);
+        if(totalQuantity >= 4) {
+            orderResponse.setDiscount(subTotal*0.2f);
+            orderResponse.setTotalPrice(subTotal * 0.8f);
         }
-        orderResponse.setTotalPrice(subtotal);
+        orderResponse.setTotalPrice(subTotal);
         return orderResponse;
     }
 

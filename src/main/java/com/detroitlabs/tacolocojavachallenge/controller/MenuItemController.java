@@ -16,11 +16,12 @@ public class MenuItemController {
     @Autowired
     private OrderService orderService;
 
+
+
     @GetMapping("/totalAmount")
     @ResponseStatus(HttpStatus.OK)
     public OrderResponse getTotalAmount(@RequestBody List<OrderRequest> orderRequestLists) {
         return orderService.getTotalAmount(orderRequestLists);
     }
-
 
 }

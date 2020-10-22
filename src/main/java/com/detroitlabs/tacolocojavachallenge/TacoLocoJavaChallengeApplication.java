@@ -23,13 +23,14 @@ public class TacoLocoJavaChallengeApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+        /** Initializing menu from ORM itself which can be used from @database in real problem*/
         List<Menu> menuList = new ArrayList<>();
-        Menu menu1 = new Menu("Veggie Taco",2.5f);
-        Menu menu2 = new Menu("Chicken Taco",3f);
-        Menu menu3 = new Menu("Beef Taco",3f);
-        Menu menu4 = new Menu("Chorizo Taco",3.5f);
+        Menu menuOne = new Menu("Veggie Taco",2.5f);
+        Menu menuTwo= new Menu("Chicken Taco",3f);
+        Menu menuThree= new Menu("Beef Taco",3f);
+        Menu menuFour = new Menu("Chorizo Taco",3.5f);
 
-        Collections.addAll(menuList,menu1,menu2,menu3,menu4);
+        Collections.addAll(menuList,menuOne,menuTwo,menuThree,menuFour);
         menuRepo.saveAll(menuList);
 
     }
