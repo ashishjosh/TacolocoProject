@@ -2,7 +2,7 @@
 This is a maven project developed using Spring Boot with. A RESTful web service which takes the item and quantities ordered as input and display the total order as response.
 If any customer order 4 or more Tacos, then 20% discount will be offered from total order.
  
-###Requirements For Running Application
+**Requirements For Running Application**
 
 For building and running the application, spring boot project with embedded tomcat server(default port 8080) and following tools has been used.
 1. JDK 1.8+
