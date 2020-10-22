@@ -9,14 +9,18 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import static org.junit.Assert.assertEquals;
+/**
+ * Junit Test class for controller using JUnit4
+ * @InjectMocks: This tells Mockito which class to inject mocks into
+ * @Mock :OrderService inside the OrderService class is mocked
+ * */
 
 @RunWith(MockitoJUnitRunner.class)
 public class MenuItemControllerTest {
+
     @InjectMocks
     private MenuItemController menuItemController;
 
@@ -27,11 +31,11 @@ public class MenuItemControllerTest {
     public void testGetTotalAmount() {
 
         List<OrderRequest> orderRequestList = new ArrayList<>();
-        OrderResponse orderRespons = new OrderResponse();
-        orderRespons.setDiscount(2.0f);
-        Mockito.when(orderService.getTotalAmount(orderRequestList)).thenReturn(orderRespons);
-        OrderResponse respnose = menuItemController.getTotalAmount(orderRequestList);
-        assertEquals(2.0f, respnose.getDiscount(), 0.00001);
+        OrderResponse orderResponse = new OrderResponse();
+        orderResponse.setDiscount(2.0f);
+        Mockito.when(orderService.getTotalAmount(orderRequestList)).thenReturn(orderResponse);
+        OrderResponse response = menuItemController.getTotalAmount(orderRequestList);
+        assertEquals(2.0f, response.getDiscount(), 0.00001);
     }
 
 }

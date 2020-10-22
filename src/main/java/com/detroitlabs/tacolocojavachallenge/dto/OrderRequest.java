@@ -1,12 +1,7 @@
 package com.detroitlabs.tacolocojavachallenge.dto;
-
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-//@AllArgsConstructor
-//@NoArgsConstructor
-@Data
+/**
+ * Domain class for OrderRequest with name on order and quantity of tacos
+ **/
 public class OrderRequest {
     private String name;
     private int quantity;

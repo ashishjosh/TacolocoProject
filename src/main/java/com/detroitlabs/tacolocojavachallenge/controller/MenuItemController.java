@@ -6,13 +6,15 @@ import com.detroitlabs.tacolocojavachallenge.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
 @RequestMapping("/request")
 public class MenuItemController {
 
+    /**
+     Tells the application context to inject an instance of OrderService here
+     **/
     @Autowired
     private OrderService orderService;
 

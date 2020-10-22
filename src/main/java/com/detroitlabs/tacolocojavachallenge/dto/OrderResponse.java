@@ -3,19 +3,21 @@ import java.util.List;
 
 public class OrderResponse {
     /**
-     * @subTotal is  os
-     * @discount : 20$
-     * This class is domain c;ass tp spre
+     * @subTotal : total amount of tacos purchased in dollar
+     * @discount : 20% of orderTotalAmount is offered if order contains any 4 or more than 4 tacos
+     * @totalprice : the price after discount
+     * This class is domain class to display the order response as per the business logic
      * */
     private List<OrderRequest> orderRequestList;
     private float subTotal;
     private float discount;
     private float totalPrice;
 
+    //empty constructor
     public OrderResponse() {
 
     }
-
+    // list of order request for tacos
     public List<OrderRequest> getOrderRequestList() {
         return orderRequestList;
     }

@@ -3,17 +3,17 @@ package com.detroitlabs.tacolocojavachallenge.service;
 import com.detroitlabs.tacolocojavachallenge.dto.OrderRequest;
 import com.detroitlabs.tacolocojavachallenge.entity.Menu;
 import com.detroitlabs.tacolocojavachallenge.repository.MenuRepo;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.*;
 import org.mockito.junit.MockitoJUnitRunner;
-
 import java.util.ArrayList;
 import java.util.List;
+/**
+ * JUnit Test class for testing service or business logic
+ */
 
-import static org.junit.Assert.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class OrderServiceTest {
@@ -40,7 +40,6 @@ public class OrderServiceTest {
             orderRequestList.add(orderRequest);
         }
     }
-
     @Test
     public void testGetTotalAmount() {
         Mockito.when(menuRepo.findByItem(ArgumentMatchers.anyString())).thenReturn(menu);

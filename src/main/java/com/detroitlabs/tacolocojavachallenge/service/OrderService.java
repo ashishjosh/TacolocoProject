@@ -6,8 +6,8 @@ import com.detroitlabs.tacolocojavachallenge.entity.Menu;
 import com.detroitlabs.tacolocojavachallenge.repository.MenuRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
+/** service class for main business logic of api  */
 
 @Service
 public class OrderService {
