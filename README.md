@@ -13,7 +13,8 @@ For building and running the application, spring boot project with embedded tomc
 5. Postman for request and response
 Need to add the maven dependency for  Spring Web, H2, JUnit4, Mockito, lombok(for removing boiler plate code) 
 
-### Running the application Locally
+**Running the application Locally**
+
 There are several ways to run SpringBoot Application. One way is to run the main method in com.detroitlabs.tacolocojavachallenge from your IDE
 1. Download the zip file or clone the Git repository.
 2. Unzip the zip file (if you downloaded one)
@@ -30,7 +31,8 @@ $ git clone https://github.com/ashishjosh/TacolocoProject.git
 $ cd tacolocojavachallenge
 $ mvn spring-boot:run
 
-### Running the application with Executable JAR
+**Running the application with Executable JAR**
+
 The code can be built into a jar & then executed/run. 
 Once the jar is built, run the jar by double clicking on it or by using the command
 
@@ -39,7 +41,8 @@ $ cd tacolocojavachallenge
 $ mvn package -DskipTests
 $ java -jar target/SBtemplate-0.0.1-SNAPSHOT.jar --spring.profiles.active=test
 
-###Accessing Data in H2 Database
+**Accessing Data in H2 Database**
+
 URL to access H2 console: http://localhost:8081/h2-console
 (http://localhost:8081/h2-console/login.jsp?jsessionid=96f076c1721dc38db907bdc41570b41e)
 Saved Settings: Generic H2 (Embedded)
@@ -53,7 +56,7 @@ The table is created on the basis of information about item and price of tacos i
 
 ###Testing API(GET ony as per the requirement)
 
-###Testing using Postman as client for RESTful API
+**Testing using Postman as client for RESTful API**
 
 Testing with Maven
 Run only unit tests:
@@ -63,7 +66,7 @@ $ mvn clean test
 -> http://localhost:8081/request/totalAmount
 -> Hit the Send button
 
-###Sample Request Format:Valid JSON Format
+**Sample Request Format:Valid JSON Format**
 
 I have used the format as per the requirement of my application
 [{
@@ -80,7 +83,7 @@ I have used the format as per the requirement of my application
 "quantity":3
 }
 ]
-###Sample Response Format: Valid JSON format
+**Sample Response Format: Valid JSON format**
 
  {
      "orderRequestList": [
@@ -104,13 +107,13 @@ I have used the format as per the requirement of my application
  Note: The amount represents the total price in dollars($), 
  which could be designed at front end
  
-###Documentation
+**Documentation**
  
 ->Postman Collection - online, with code auto-generated snippets
 ->Postman Collection for offline testing is available in the postman folder.
 ->Swagger - http://localhost:8081/swagger-ui.html- Documentation & Testing
 
-###Screenshots of Project
+**Screenshots of Project**
 
 #The End
 
