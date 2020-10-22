@@ -6,8 +6,8 @@ import javax.persistence.*;
  * Model class or POJO class representing the input variables, constructor, getter and setter methods
  * lombok can be used as alternate
  */
-@Entity
 //Table name is menu in H2 database
+@Entity
 public class  Menu {
     @Id //Id is primary key
     @GeneratedValue(strategy = GenerationType.IDENTITY)
