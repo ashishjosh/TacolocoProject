@@ -7,7 +7,9 @@ import com.detroitlabs.tacolocojavachallenge.repository.MenuRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
-/** service class for main business logic of api  */
+/** service class for main business logic of api
+ * edge case are handled with if statement
+ */
 
 @Service
 public class OrderService {
@@ -22,7 +24,9 @@ public class OrderService {
         int totalQuantity = 0;
         for (OrderRequest orderRequest : orderRequestList) {
             Menu menu = menuRepo.findByItem(orderRequest.getName());
-            if(menu != null) { // menu null pointer handle
+
+            // menu null pointer handle
+            if(menu != null) {
                 subTotal += orderRequest.getQuantity() * menu.getPrice();
                 totalQuantity += orderRequest.getQuantity();
             }

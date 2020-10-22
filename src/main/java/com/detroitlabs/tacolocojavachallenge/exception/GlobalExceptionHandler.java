@@ -9,7 +9,7 @@ import org.springframework.web.context.request.WebRequest;
 /**
  * @ControllerAdvice: allows to handle exceptions across the whole application in one global handling component
  * It can be viewed as an interceptor of exceptions
- * */
+ */
 @ControllerAdvice
 public class GlobalExceptionHandler {
     @ExceptionHandler(ResourceNotFoundException.class)

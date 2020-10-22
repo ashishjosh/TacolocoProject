@@ -3,8 +3,9 @@ package com.detroitlabs.tacolocojavachallenge.entity;
 import javax.persistence.*;
 
 /**
- Model class or POJO class representing the input variables, constructor, getter and setter methods
- * */
+ * Model class or POJO class representing the input variables, constructor, getter and setter methods
+ * lombok can be used as alternate
+ */
 @Entity
 //Table name is menu in H2 database
 public class  Menu {
@@ -24,7 +25,7 @@ public class  Menu {
         this.item = item;
         this.price = price;
     }
-    // getter and setter method, lombok can be used as alternate
+
     public int getId() {
         return id;
     }

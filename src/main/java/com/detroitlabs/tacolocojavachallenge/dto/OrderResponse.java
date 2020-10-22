@@ -7,7 +7,7 @@ public class OrderResponse {
      * @discount : 20% of orderTotalAmount is offered if order contains any 4 or more than 4 tacos
      * @totalprice : the price after discount
      * This class is domain class to display the order response as per the business logic
-     * */
+     */
     private List<OrderRequest> orderRequestList;
     private float subTotal;
     private float discount;

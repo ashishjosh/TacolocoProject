@@ -3,7 +3,7 @@ package com.detroitlabs.tacolocojavachallenge.exception;
 import java.util.Date;
 /**
  * Class to display the error details, if any, in specific format, however default JSON format could be used
- * */
+ */
 
 public class ErrorDetails {
     private Date timestamp;
